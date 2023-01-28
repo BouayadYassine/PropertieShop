@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import classes from "./Cart.module.css";
 import "./styles.css";
 import Header from "./Header";
@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import "react-multi-carousel/lib/styles.css";
 import { deletePropertie } from "../redux/PropertieSlice";
 import Footer from "../Footer/Footer";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Cart = () => {
   const propertieList = useSelector((state) => state.Properties.value);
@@ -17,10 +18,10 @@ const Cart = () => {
       <Navbar />
       <Header />
 
-      <div className={classes.container}>
+      <div className={[classes.container, "container"].join(" ")}>
         {propertieList.map((e) => {
           return (
-            <div className={classes.PropertyItem} key={e.id}>
+            <div className={[classes.PropertyItem, classes.flex]} key={e.id}>
               <img src={e.Image} alt='' />
               <div className={classes.PropertyContent}>
                 <span className={classes.price}>{e.price}</span>
