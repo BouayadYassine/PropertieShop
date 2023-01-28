@@ -57,7 +57,7 @@ a {
   display: inline-block;
 }
 .price:after {
-  position: absolute;
+  position: relative;
   content: "";
   width: 100%;
   height: 2px;
