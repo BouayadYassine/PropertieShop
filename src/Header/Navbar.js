@@ -1,15 +1,20 @@
 import React, { useEffect, useRef, useState } from "react";
 import classes from "./Navbar.module.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import { FaCartPlus } from "react-icons/fa";
+import "./styles.css";
 
 const navbar = () => {
   return (
     <nav className={classes.sitenav}>
-      <div className={classes.container}>
+      <div className='container'>
         <div className={classes.menubgwrap}>
           <div className={classes.sitenavigation}>
-            <a href='index.html' className={classes.logo}>
+            <a
+              href='index.html'
+              className={["float-start", classes.logo].join(" ")}
+            >
               Property
             </a>
             <ul className={classes.sitemenu}>

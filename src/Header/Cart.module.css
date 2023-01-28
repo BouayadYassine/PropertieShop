@@ -3,9 +3,6 @@ body {
   font-weight: 400;
   font-size: 14px;
 }
-div {
-  display: block;
-}
 
 .container {
   max-width: 1200px;

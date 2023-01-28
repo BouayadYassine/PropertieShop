@@ -1,0 +1,94 @@
+.site_footer {
+  background: #efefef;
+  font-size: 14px;
+  color: #888;
+  padding: 70px 0;
+}
+
+.site_footer a {
+  color: #777;
+  position: relative;
+  display: inline-block;
+  text-decoration: underline;
+}
+
+.site_footer a:hover {
+  color: black;
+  text-decoration: none;
+}
+.site_footer a:hover::before {
+  background: rgba(#00204a, 1);
+}
+
+.footer_cta h2 {
+  font-size: 30px;
+  color: #00204a;
+}
+
+.widget {
+  margin-bottom: 40px;
+  display: block;
+}
+.widget h3 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #00204a;
+}
+
+.widget .links {
+  width: 150px;
+}
+
+.widget .links li {
+  margin-bottom: 10px;
+}
+
+.social li {
+  display: inline-block;
+  margin-right: 5px;
+}
+.social li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background: #ccc;
+  border-radius: 40%;
+}
+
+.social li a::before {
+  display: none;
+}
+
+.social li a:hover {
+  background: #00204a;
+  color: white;
+}
+.social li a span {
+  font-size: 13px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social a {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #00204a;
+  border-radius: 50%;
+  transition: 0.3s all ease;
+  border: 2px solid transparent;
+  position: relative;
+  top: 0;
+}
+.social a:hover {
+  top: -5px;
+  background: transparent;
+  border: 2px solid white;
+}

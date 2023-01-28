@@ -3,7 +3,7 @@
 }
 .Heroslide {
   top: 0;
-  position: relative;
+  position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
@@ -44,35 +44,23 @@
 .Img::before {
   background: rgba(34, 34, 34, 0.4);
 }
-div {
-  display: block;
-}
-.formsearch > h3 {
-  color: white;
+
+.heading {
+  position: relative;
+  color: #fff;
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   margin-bottom: 30px;
   font-weight: 600;
-  z-index: 1;
-  top: 35%;
-  right: 25%;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
 }
-
 .formcontrol {
   padding-top: 18px;
   padding-bottom: 18px;
-  padding-left: 25px;
+  padding-left: 20px;
   padding-right: 20px;
+  margin-right: 1rem;
   border: none;
   border-radius: 30px;
-  font-size: 15px;
-  z-index: 1;
-  position: absolute;
-  top: 50%;
-  right: 35%;
-  left: 33%;
+  position: relative;
 }
 .formcontrol:hover,
 .formcontrol:active,
@@ -80,24 +68,39 @@ div {
   outline: none;
   box-shadow: none;
 }
-.formsearch > button {
-  position: absolute;
-  color: white;
+.btn {
   background-color: #005555;
-  border: none;
-  padding: 18px 20px;
-  border-radius: 30px;
-  top: 50%;
-  right: 27%;
-  z-index: 1;
   padding-left: 30px;
   padding-right: 30px;
-  cursor: pointer;
-  transition: 0.3s all ease;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: none !important;
+  z-index: 1;
+}
+.btn.btn_primary {
+  background: #005555;
+  color: #fff;
 }
 .formsearch > button:hover {
   box-shadow: 0 15px 30px -10px rgba(black, 0.1);
   top: 49.5%;
+}
+.formsearch {
+  display: flex !important;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  height: 100vh;
+  min-height: 600px;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 
 @media screen and (max-width: 81em) {

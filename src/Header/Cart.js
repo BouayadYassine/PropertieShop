@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import classes from "./Cart.module.css";
+import "./styles.css";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import { useDispatch, useSelector } from "react-redux";
 import "react-multi-carousel/lib/styles.css";
 import { deletePropertie } from "../redux/PropertieSlice";
+import Footer from "../Footer/Footer";
 
 const Cart = () => {
   const propertieList = useSelector((state) => state.Properties.value);
@@ -40,6 +42,8 @@ const Cart = () => {
           );
         })}
       </div>
+
+      <Footer />
     </div>
   );
 };

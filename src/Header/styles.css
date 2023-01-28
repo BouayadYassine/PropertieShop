@@ -1,0 +1,28 @@
+.logo {
+  font-family: "Work Sans", sans-serif;
+  color: #00204a;
+}
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  background-color: rgba(black, 0.5);
+  transition: 0.3s all ease;
+  opacity: 0;
+  visibility: hidden;
+}

@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import data from "../PropertySection/data";
 export const PropertieSlice = createSlice({
   name: "Propertie",
   initialState: { value: [] },

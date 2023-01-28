@@ -3,9 +3,6 @@ body {
   font-weight: 400;
   font-size: 14px;
 }
-div {
-  display: block;
-}
 
 .Section {
   padding-top: 4rem;
@@ -44,6 +41,9 @@ div {
   padding: 1.5rem;
   border-radius: 40px;
   border: none;
+}
+a {
+  text-decoration: none;
 }
 .PropertiesBtn > a {
   font-size: 1rem;

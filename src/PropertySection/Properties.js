@@ -7,6 +7,7 @@ import "react-multi-carousel/lib/styles.css";
 import { addPropertie } from "../redux/PropertieSlice";
 import { nanoid } from "@reduxjs/toolkit";
 import data from "./data";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const responsive = {
   superLargeDesktop: {
@@ -35,12 +36,16 @@ function Properties() {
 
   return (
     <div className={classes.Section}>
-      <div className={classes.container}>
-        <div className={classes.c1}>
-          <div className={classes.Head}>
+      <div
+        className={[classes.container, "container", "align-items-center"].join(
+          " "
+        )}
+      >
+        <div className={[classes.c1, "row"].join(" ")}>
+          <div className='col-lg-6'>
             <h2>Popular Properties</h2>
           </div>
-          <div className={classes.divBtn}>
+          <div className='col-lg-6 text-lg-end'>
             <button className={classes.PropertiesBtn}>
               <a href=''>View all properties</a>
             </button>
