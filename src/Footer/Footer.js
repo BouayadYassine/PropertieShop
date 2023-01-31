@@ -11,7 +11,6 @@ import {
 } from "react-icons/fa";
 
 function Footer() {
-  const FullYear = new Date().getFullYear();
   return (
     <div className={styles.site_footer}>
       <div className='container'>
