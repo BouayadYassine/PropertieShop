@@ -150,22 +150,6 @@ function Footer() {
             </div>
           </div>
         </div>
-
-        <div className='row mt-5'>
-          <div className='col-12 text-center'>
-            <p>
-              Copyright &copy; {FullYear}. All Rights Reserved. &mdash; Designed
-              with love by
-              <a href='https://untree.co'>Untree.co</a>
-            </p>
-            <div>
-              Distributed by
-              <a href='https://themewagon.com/' target='_blank'>
-                themewagon
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
