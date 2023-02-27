@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import Navbar from "../Header/Navbar";
 import Properties from "../PropertySection/Properties";
 import Footer from "../Footer/Footer";
+import Features from "../Features/Features";
 
 function Home() {
   return (
@@ -10,6 +11,7 @@ function Home() {
       <Navbar />
       <Header />
       <Properties />
+      <Features />
       <Footer />
     </div>
   );

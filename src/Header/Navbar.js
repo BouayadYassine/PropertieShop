@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import classes from "./Navbar.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-import { FaCartPlus } from "react-icons/fa";
+import { FaCartPlus, FaChevronDown, FaChevronRight } from "react-icons/fa";
 import "./styles.css";
 
 const navbar = () => {
@@ -19,7 +19,9 @@ const navbar = () => {
                 <Link to='/'>Home</Link>
               </li>
               <li className={classes.haschildren}>
-                <a href='/'>Properties</a>
+                <a href='/'>
+                  Properties <FaChevronDown className={classes.icona} />
+                </a>
                 <ul className={classes.dropdown}>
                   <li>
                     <a href='/'>Buy Property</a>
@@ -28,7 +30,9 @@ const navbar = () => {
                     <a href='/'>Sell Property</a>
                   </li>
                   <li className={classes.haschildren}>
-                    <a href='/'>Dropdown</a>
+                    <a href='/'>
+                      Dropdown <FaChevronRight className={classes.arrowright} />
+                    </a>
                     <ul className=''>
                       <li>
                         <a href='/'>Sub Menu One</a>

@@ -14,7 +14,6 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
   max-width: 100%;
   align-items: center;
   justify-content: center;
@@ -56,7 +55,7 @@ body {
 .heading {
   position: relative;
   color: #fff;
-  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-size: 3rem;
   margin-bottom: 30px;
   font-weight: 600;
 }
@@ -69,6 +68,7 @@ body {
   border: none;
   border-radius: 30px;
   position: relative;
+  transform: translateZ(1);
 }
 .formcontrol:hover,
 .formcontrol:active,
@@ -84,16 +84,16 @@ body {
   font-size: 1rem;
   border-radius: 30px;
   border: none !important;
+  display: inline-block;
+  top: 0;
+  position: relative;
   z-index: 1;
+  transition: 0.3s all ease;
 }
-.btn.btn_primary {
-  background: #005555;
-  color: #fff;
+.btn:hover {
+  top: -2px;
 }
-.formsearch > button:hover {
-  box-shadow: 0 15px 30px -10px rgba(black, 0.1);
-  top: 49.5%;
-}
+
 .formsearch {
   display: flex !important;
   max-width: 600px;
