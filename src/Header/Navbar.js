@@ -19,7 +19,7 @@ const navbar = () => {
                 <Link to='/'>Home</Link>
               </li>
               <li className={classes.haschildren}>
-                <a href='/'>
+                <a href='#properties'>
                   Properties <FaChevronDown className={classes.icona} />
                 </a>
                 <ul className={classes.dropdown}>

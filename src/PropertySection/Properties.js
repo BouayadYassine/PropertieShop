@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import classes from "./Properties.module.css";
 import { FaBed, FaBath } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { addPropertie } from "../redux/PropertieSlice";
@@ -30,12 +30,45 @@ const responsive = {
 };
 
 function Properties() {
-  const [Data, setData] = useState(data);
   const dispatch = useDispatch();
-  const propertieList = useSelector((state) => state.Properties.value);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const carouselRef = useRef(null);
+  const handlePreviousClick = () => {
+    carouselRef.current.previous();
+    setActiveSlide(activeSlide - 1);
+  };
+
+  const handleNextClick = () => {
+    carouselRef.current.next();
+    setActiveSlide(activeSlide + 1);
+  };
+
+  const CustomButtonGroup = ({ next, previous }) => {
+    return (
+      <div className={[classes.btn_details, "row"].join(" ")}>
+        <div className={["col-md-6", "text-left"].join(" ")}>
+          <button
+            className={[classes.btn, classes.primary, classes.prev].join(" ")}
+            onClick={handlePreviousClick}
+          >
+            prev
+          </button>
+        </div>
+
+        <div className={["col-md-6", " text-lg-end"].join(" ")}>
+          <button
+            className={[classes.btn, classes.primary, classes.next].join(" ")}
+            onClick={handleNextClick}
+          >
+            next
+          </button>
+        </div>
+      </div>
+    );
+  };
 
   return (
-    <div className={classes.Section}>
+    <div id='properties' className={classes.Section}>
       <div
         className={[classes.container, "container", "align-items-center"].join(
           " "
@@ -53,7 +86,17 @@ function Properties() {
         </div>
 
         <div className={classes.center}>
-          <Carousel responsive={responsive}>
+          <Carousel
+            responsive={responsive}
+            infinite={true}
+            autoPlay={true}
+            customTransition='all .6s ease'
+            autoPlaySpeed={3000}
+            transitionDuration={500}
+            removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+            customButtonGroup={<CustomButtonGroup />}
+            ref={carouselRef}
+          >
             {data.map((e) => {
               return (
                 <div
@@ -104,6 +147,7 @@ function Properties() {
             })}
           </Carousel>
         </div>
+        <CustomButtonGroup />
       </div>
     </div>
   );

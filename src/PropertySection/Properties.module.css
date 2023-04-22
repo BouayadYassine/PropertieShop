@@ -7,7 +7,7 @@ body {
 .Section {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  overflow: scroll;
+  overflow: none;
 }
 
 .Head {
@@ -145,4 +145,33 @@ a {
 .detailsBtn > a {
   color: white;
   cursor: pointer;
+}
+
+.btn {
+  text-decoration: none;
+  border: none;
+  background-color: #00204a1a;
+  cursor: pointer;
+  padding: 7px 20px;
+  border-radius: 30px;
+  text-align: center;
+  transition: 0.3s all ease;
+}
+.btn:hover {
+  color: white;
+  background-color: #00204a;
+}
+
+.primary {
+  color: #00204a;
+}
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+}
+.btn_details {
+  margin-top: 1rem;
 }

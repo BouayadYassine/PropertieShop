@@ -4,6 +4,7 @@ import Navbar from "../Header/Navbar";
 import Properties from "../PropertySection/Properties";
 import Footer from "../Footer/Footer";
 import Features from "../Features/Features";
+import Testimonials from "../TestimonialsSection/Testimonials";
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       <Header />
       <Properties />
       <Features />
+      <Testimonials />
       <Footer />
     </div>
   );

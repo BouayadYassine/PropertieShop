@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./Features.module.css";
 import "./flaticon/font/flaticon.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Features() {
+  const [Load, setLoad] = useState();
+
   return (
     <div className={["container", classes.container].join(" ")}>
       <div className={["row"].join(" ")}>

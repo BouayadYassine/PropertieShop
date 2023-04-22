@@ -1,0 +1,58 @@
+html {
+  scroll-behavior: smooth;
+}
+.button {
+  text-decoration: none;
+  border: none;
+  background-color: #00204a1a;
+  cursor: pointer;
+}
+.button:hover {
+  color: white;
+  background-color: #00204a;
+}
+.primary {
+  color: #00204a;
+}
+.div_button span {
+  display: inline-block;
+  margin: auto;
+  padding: 7px 20px;
+  border-radius: 30px;
+  text-align: center;
+  justify-content: end;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+
+.imgs {
+  border-radius: 50%;
+  width: 100px;
+}
+.container_card {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.ctn {
+  display: inline-block;
+  width: 90%;
+}
+.icons {
+  color: rgb(255, 193, 7);
+  margin-top: 1rem;
+  margin-left: 2px;
+}
+.name {
+  color: rgb(0, 32, 74);
+  font-size: 1.25rem;
+}
+.testimonials_sec {
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+}
+.speciality {
+  font-family: "Work Sans", sans-serif;
+  opacity: 1;
+  color: #888888;
+}
